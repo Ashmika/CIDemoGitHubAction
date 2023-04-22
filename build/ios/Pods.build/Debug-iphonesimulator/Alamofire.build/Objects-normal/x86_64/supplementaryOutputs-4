@@ -1,0 +1,25 @@
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/ParameterEncoding.swift":
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoding.swiftdeps"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoding.dia"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoding.o"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoding.d"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/RedirectHandler.swift":
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RedirectHandler.swiftdeps"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RedirectHandler.dia"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RedirectHandler.o"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RedirectHandler.d"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/Protected.swift":
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Protected.swiftdeps"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Protected.d"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Protected.o"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Protected.dia"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/ParameterEncoder.swift":
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoder.d"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoder.dia"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoder.swiftdeps"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/ParameterEncoder.o"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/OperationQueue+Alamofire.swift":
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/OperationQueue+Alamofire.dia"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/OperationQueue+Alamofire.swiftdeps"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/OperationQueue+Alamofire.d"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/OperationQueue+Alamofire.o"

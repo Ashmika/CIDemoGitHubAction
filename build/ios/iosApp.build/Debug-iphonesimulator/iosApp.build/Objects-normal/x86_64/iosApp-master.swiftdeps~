@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "5db1d98289a103c788a36f4814054127aa9d6830ff8f99f662121e335d701d6c"
+build_start_time: [1682165213, 124730110]
+build_end_time: [1682165213, 253484964]
+inputs:
+  "/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/iosApp/ContentView.swift": !private [1682164815, 157674789]
+  "/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/iosApp/iOSApp.swift": !private [1682164815, 128598213]

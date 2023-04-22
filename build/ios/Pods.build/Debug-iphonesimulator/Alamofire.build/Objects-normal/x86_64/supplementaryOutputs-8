@@ -1,0 +1,20 @@
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/Validation.swift":
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Validation.o"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Validation.dia"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Validation.d"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Validation.swiftdeps"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift":
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLSessionConfiguration+Alamofire.dia"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLSessionConfiguration+Alamofire.swiftdeps"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLSessionConfiguration+Alamofire.d"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLSessionConfiguration+Alamofire.o"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/URLRequest+Alamofire.swift":
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLRequest+Alamofire.swiftdeps"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLRequest+Alamofire.d"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLRequest+Alamofire.o"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLRequest+Alamofire.dia"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/URLEncodedFormEncoder.swift":
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLEncodedFormEncoder.o"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLEncodedFormEncoder.swiftdeps"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLEncodedFormEncoder.dia"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLEncodedFormEncoder.d"

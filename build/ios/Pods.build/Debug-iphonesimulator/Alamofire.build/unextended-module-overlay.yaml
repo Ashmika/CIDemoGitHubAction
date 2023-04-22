@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/unextended-module.modulemap",
+    }]
+  }]
+}

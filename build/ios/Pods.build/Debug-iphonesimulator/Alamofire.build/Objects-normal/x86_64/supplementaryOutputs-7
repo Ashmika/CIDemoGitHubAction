@@ -1,0 +1,20 @@
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift":
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLConvertible+URLRequestConvertible.d"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLConvertible+URLRequestConvertible.dia"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLConvertible+URLRequestConvertible.o"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/URLConvertible+URLRequestConvertible.swiftdeps"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/StringEncoding+Alamofire.swift":
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/StringEncoding+Alamofire.d"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/StringEncoding+Alamofire.o"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/StringEncoding+Alamofire.swiftdeps"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/StringEncoding+Alamofire.dia"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/SessionDelegate.swift":
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/SessionDelegate.o"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/SessionDelegate.d"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/SessionDelegate.swiftdeps"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/SessionDelegate.dia"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/Session.swift":
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Session.dia"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Session.swiftdeps"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Session.o"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Session.d"

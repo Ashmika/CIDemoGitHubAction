@@ -1,0 +1,20 @@
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/Response.swift":
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Response.d"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Response.swiftdeps"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Response.o"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Response.dia"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/Request.swift":
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Request.dia"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Request.o"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Request.d"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/Request.swiftdeps"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/RequestInterceptor.swift":
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestInterceptor.d"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestInterceptor.dia"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestInterceptor.swiftdeps"
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestInterceptor.o"
+"/Users/gs-user/Documents/CIDemoGitHUbAction/iosApp/Pods/Alamofire/Source/RequestTaskMap.swift":
+  object: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestTaskMap.o"
+  swift-dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestTaskMap.swiftdeps"
+  dependencies: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestTaskMap.d"
+  diagnostics: "/Users/gs-user/Documents/CIDemoGitHUbAction/build/ios/Pods.build/Debug-iphonesimulator/Alamofire.build/Objects-normal/x86_64/RequestTaskMap.dia"
