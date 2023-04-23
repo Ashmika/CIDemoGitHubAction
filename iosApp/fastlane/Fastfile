@@ -76,7 +76,7 @@ platform :ios do
      match(
        type: "development",
        git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-       force: true
+       force: true,
        readonly: true,
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD,
