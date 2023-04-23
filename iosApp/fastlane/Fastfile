@@ -79,7 +79,6 @@ platform :ios do
        type: "development",
        git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
        force: true,
-       readonly: true,
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD,
        api_key: app_store_connect_api_key,
