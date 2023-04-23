@@ -95,6 +95,11 @@ platform :ios do
          export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
+         export_options: {
+            provisioningProfiles: {
+                'com.ciapp.demo' => "match Development com.ciapp.demo",
+            }
+         }
       )
    end
 
