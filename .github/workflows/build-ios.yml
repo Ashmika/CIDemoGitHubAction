@@ -28,4 +28,7 @@ jobs:
       - name: Install gems
         run: cd iosApp && bundle install
 
+      - name: Install Pods
+        run: cd iosApp && bundle exec pod install
+
 
