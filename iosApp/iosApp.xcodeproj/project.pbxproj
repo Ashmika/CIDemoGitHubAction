@@ -336,8 +336,8 @@
 			baseConfigurationReference = E24C61793D403CF80E3C2EF9 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q3J5LNCB8G;
@@ -362,8 +362,8 @@
 			baseConfigurationReference = 70654D13C04EFFFD056D477D /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q3J5LNCB8G;
