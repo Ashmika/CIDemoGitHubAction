@@ -65,8 +65,8 @@ jobs:
         with:
             name: development ipa & dsyms
             path: |
-              ${{ github.workspace }}/build/develop-app.ipa
-              ${{ github.workspace }}/build/*.app.dSYM.zip
+              ${{ github.workspace }}/iosApp/build/develop-app.ipa
+              ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
 
 
 
