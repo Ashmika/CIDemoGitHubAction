@@ -104,7 +104,7 @@ platform :ios do
   desc "Sync Development Certification and Provisioning Profile"
     lane :provisioning_profiles_appstore do
        match(
-         type: "app-store",
+         type: "appstore",
          git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
          force: true,
          keychain_name: TEMP_KEYCHAIN_USER,
