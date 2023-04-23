@@ -33,6 +33,9 @@ jobs:
       - name: Install gems
         run: cd iosApp && bundle install
 
+      - name: Build Gradle
+        run: ./gradlew build
+
       - name: Install Pods
         run: cd iosApp && bundle exec pod install
 
