@@ -14,8 +14,10 @@ jobs:
       XCODE_VERSION: 14.2
 
 
-    - name: Select Xcode 12
-       run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+  steps:
+  - name: Select XCode
+    # Use XCODE_VERSION env variable to set the XCode version you want.
+    run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
 
 
 #    steps:
