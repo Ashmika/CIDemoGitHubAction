@@ -336,11 +336,12 @@
 			baseConfigurationReference = E24C61793D403CF80E3C2EF9 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H7T4KD29FR;
+				DEVELOPMENT_TEAM = Q3J5LNCB8G;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q3J5LNCB8G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -349,8 +350,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciapp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "iOS Ci Demo Dev Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ciapp.demo";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.ciapp.demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,11 +362,12 @@
 			baseConfigurationReference = 70654D13C04EFFFD056D477D /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujarathi (Q3J5LNCB8G)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H7T4KD29FR;
+				DEVELOPMENT_TEAM = Q3J5LNCB8G;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q3J5LNCB8G;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,8 +376,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciapp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "iOS Ci Demo Dev Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ciapp.demo";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.ciapp.demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
