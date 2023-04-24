@@ -37,8 +37,8 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
 
-#      - name: Build Gradle
-#        run: ./gradlew build
+      - name: Build Gradle
+        run: ./gradlew build
 
       - name: Credentials setup
         run: |
