@@ -40,16 +40,13 @@ jobs:
       - name: Build Gradle
         run: ./gradlew build
 
-      - name: Clone repo
-        uses: actions/checkout@v2
-        with:
-           repository: believrapp/api-env
-           ref: main
-           path: cloned-secrets
-           token: $ {{ secrets.GH_TOKEN}}
+      - name: Credentials setup
+        run: |
+          git config --global credential.helper store
+          echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
 
       - name: Install Pods
-        run: pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git && cd iosApp && bundle exec pod install
+        run: cd iosApp && bundle exec pod install
 
       - name: Build & upload iOS binary
         run: cd iosApp && bundle exec fastlane build_for_release --verbose
