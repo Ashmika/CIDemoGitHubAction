@@ -37,8 +37,8 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
 
-      - name: Build Gradle
-        run: ./gradlew build
+#      - name: Build Gradle
+#        run: ./gradlew build
 
       - name: Credentials setup
         run: |
@@ -46,33 +46,35 @@ jobs:
           echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
 
       - name: Install Pods
-        run: cd iosApp && bundle exec pod install
+        run: ls ~/.cocoapods/repos 
 
-      - name: Build & upload iOS binary
-        run: cd iosApp && bundle exec fastlane build_for_release --verbose
-        env:
-          APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
-          APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
-          APP_STORE_CONNECT_API_KEY_IN_HOUSE: ${{ secrets.APP_STORE_CONNECT_API_KEY_IN_HOUSE }}
-          APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 }}
-          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-          TEAM_ID: ${{ secrets.TEAM_ID }}
-          TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
-          TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
-          GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+#        && cd iosApp && bundle exec pod install
 
-      - name: Upload app-store ipa and dsyms to artifacts
-        uses: actions/upload-artifact@v2
-        with:
-            name: development ipa & dsyms
-            path: |
-              ${{ github.workspace }}/iosApp/build/develop-app.ipa
-              ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
-
-
+#      - name: Build & upload iOS binary
+#        run: cd iosApp && bundle exec fastlane build_for_release --verbose
+#        env:
+#          APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+#          APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+#          APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
+#          APP_STORE_CONNECT_API_KEY_IN_HOUSE: ${{ secrets.APP_STORE_CONNECT_API_KEY_IN_HOUSE }}
+#          APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 }}
+#          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+#          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+#          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+#          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+#          TEAM_ID: ${{ secrets.TEAM_ID }}
+#          TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
+#          TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
+#          GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+#
+#      - name: Upload app-store ipa and dsyms to artifacts
+#        uses: actions/upload-artifact@v2
+#        with:
+#            name: development ipa & dsyms
+#            path: |
+#              ${{ github.workspace }}/iosApp/build/develop-app.ipa
+#              ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
+#
+#
 
 
