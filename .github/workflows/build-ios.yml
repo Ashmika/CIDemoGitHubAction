@@ -44,10 +44,6 @@ jobs:
         run: |
           git config --global credential.helper store
           echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
-
-      - name: Install Cocoapods
-        run: |
-          sudo gem install cocoapods --verbose
           pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git --verbose
 
       - name: Install Pods
