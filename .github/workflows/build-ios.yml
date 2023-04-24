@@ -55,7 +55,7 @@ jobs:
           cd iosApp && pod install --verbose
 
       - name: Build & upload iOS binary
-        run: cd iosApp && bundle exec fastlane develop_build --verbose
+        run: cd iosApp && bundle exec fastlane build_for_release --verbose
         env:
           APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
           APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
