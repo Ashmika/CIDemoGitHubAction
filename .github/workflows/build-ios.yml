@@ -48,6 +48,7 @@ jobs:
       - name: Install Cocoapods
         run: |
           sudo gem install cocoapods --verbose
+          pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git --verbose
 
       - name: Install Pods
         run: cd iosApp && pod install --verbose
