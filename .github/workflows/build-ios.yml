@@ -54,8 +54,6 @@ jobs:
           pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git --verbose
           cd iosApp && pod install --verbose
 
-#        && cd iosApp && bundle exec pod install
-
       - name: Build & upload iOS binary
         run: cd iosApp && bundle exec fastlane develop_build --verbose
         env:

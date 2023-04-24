@@ -336,8 +336,8 @@
 			baseConfigurationReference = E24C61793D403CF80E3C2EF9 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Ashmika Gujaarthi (H7T4KD29FR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Ashmika Gujaarthi (H7T4KD29FR)";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q3J5LNCB8G;
@@ -351,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciapp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ciapp.demo";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.ciapp.demo";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.ciapp.demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,8 +362,8 @@
 			baseConfigurationReference = 70654D13C04EFFFD056D477D /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Ashmika Gujaarthi (H7T4KD29FR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Ashmika Gujaarthi (H7T4KD29FR)";
+				CODE_SIGN_IDENTITY = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Ashmika Gujaarthi (W46H28Q9QL)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = Q3J5LNCB8G;
@@ -377,7 +377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ciapp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ciapp.demo";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.ciapp.demo";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.ciapp.demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
