@@ -41,7 +41,7 @@ jobs:
         run: ./gradlew build
 
       - name: Install Pods
-        run: cd iosApp && bundle exec pod install
+        run: pod repo add allpodsdemo https://github.com/Ashmika/PodDemoRepository.git && cd iosApp && bundle exec pod install
 
       - name: Build & upload iOS binary
         run: cd iosApp && bundle exec fastlane build_for_release --verbose
