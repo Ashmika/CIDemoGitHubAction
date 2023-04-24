@@ -46,7 +46,7 @@ jobs:
           echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
 
       - name: Install Pods
-        run: cd iosApp && pod install
+        run: cd iosApp && pod install --verbose
 
 #        && cd iosApp && bundle exec pod install
 
