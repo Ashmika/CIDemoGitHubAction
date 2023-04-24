@@ -1,6 +1,8 @@
+source 'https://github.com/Ashmika/PodDemoRepository.git'
+
 target 'iosApp' do
   use_frameworks!
   platform :ios, '14.1'
-  pod 'Alamofire'
+  pod 'Alamofire', :path => "~/.cocoapods/repos/allpodsdemo/Alamofire.podspec"
   pod 'shared', :path => '../shared'
 end

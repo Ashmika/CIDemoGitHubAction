@@ -6,6 +6,7 @@ struct ContentView: View {
 
 	var body: some View {
 		Text(greet)
+        Text("My Demo App test with pod local repo")
 	}
 }
 
