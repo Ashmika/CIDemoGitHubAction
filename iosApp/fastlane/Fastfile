@@ -55,8 +55,8 @@ platform :ios do
   lane :develop_build do
       # add actions here: https://docs.fastlane.tools/actions
       create_temporary_keychain
-      provisioning_profiles_development
-#       prepare_signing
+#       provisioning_profiles_development
+      prepare_signing
       build_for_develop
       delete_temp_keychain(TEMP_KEYCHAIN_USER)
 
@@ -136,11 +136,11 @@ platform :ios do
          export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
-#          export_options: {
-#             provisioningProfiles: {
-#                  ENV["BUNDLE_ID"] => "iOS Ci Demo Dev Profile",
-#               }
-#           }
+         export_options: {
+            provisioningProfiles: {
+                 ENV["BUNDLE_ID"] => "iOS Ci Demo Dev Profile",
+              }
+          }
       )
    end
 
