@@ -55,7 +55,7 @@ platform :ios do
   lane :develop_build do
       # add actions here: https://docs.fastlane.tools/actions
       create_temporary_keychain
-      provisioning_profiles_development
+      prepare_signing
       build_for_develop
       delete_temp_keychain(TEMP_KEYCHAIN_USER)
 
@@ -101,6 +101,16 @@ platform :ios do
      )
   end
 
+  desc "Installs signing certificate in the keychain"
+   lane :prepare_signing do |options|
+     import_certificate(
+       certificate_path: ENV["SIGNING_KEY_FILE_PATH"],
+       certificate_password: ENV["SIGNING_KEY_PASSWORD"],
+       keychain_name: TEMP_KEYCHAIN_USER,
+       keychain_password: TEMP_KEYCHAIN_PASSWORD
+     )
+   end
+
   desc "Sync Development Certification and Provisioning Profile"
     lane :provisioning_profiles_appstore do
        match(
@@ -125,6 +135,11 @@ platform :ios do
          export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
+         export_options: {
+            provisioningProfiles: {
+                 ENV["BUNDLE_ID"] => "iOS Ci Demo Dev Profile",
+              }
+          }
       )
    end
 

@@ -37,6 +37,12 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
 
+      - name: Decode signing certificate into a file
+        env:
+            CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
+        run: |
+            echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
+
       - name: Build Gradle
         run: ./gradlew build
 
@@ -55,7 +61,7 @@ jobs:
           cd iosApp && pod install --verbose
 
       - name: Build & upload iOS binary
-        run: cd iosApp && bundle exec fastlane build_for_release --verbose
+        run: cd iosApp && bundle exec fastlane develop_build --verbose
         env:
           APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
           APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
@@ -70,6 +76,8 @@ jobs:
           TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
           TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
           GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
+          SIGNING_KEY_FILE_PATH: signing-cert.p12
 
       - name: Upload app-store ipa and dsyms to artifacts
         uses: actions/upload-artifact@v2
