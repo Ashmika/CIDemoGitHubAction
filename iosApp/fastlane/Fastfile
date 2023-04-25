@@ -136,11 +136,11 @@ platform :ios do
          export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
-         export_options: {
-            provisioningProfiles: {
-                 ENV["BUNDLE_ID"] => "iOS Ci Demo Dev Profile",
-              }
-          }
+#          export_options: {
+#             provisioningProfiles: {
+#                  ENV["BUNDLE_ID"] => "iOS Ci Demo Dev Profile",
+#               }
+#           }
       )
    end
 
