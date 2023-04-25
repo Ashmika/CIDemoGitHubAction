@@ -55,7 +55,8 @@ platform :ios do
   lane :develop_build do
       # add actions here: https://docs.fastlane.tools/actions
       create_temporary_keychain
-      prepare_signing
+      provisioning_profiles_development
+#       prepare_signing
       build_for_develop
       delete_temp_keychain(TEMP_KEYCHAIN_USER)
 
