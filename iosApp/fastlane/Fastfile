@@ -54,19 +54,11 @@ platform :ios do
   desc "Description of what the lane does"
   lane :develop_build do
       # add actions here: https://docs.fastlane.tools/actions
-      delete_temporary_keychain
       create_temporary_keychain
 #       provisioning_profiles_development
       prepare_signing
       build_for_develop
 
-  end
-
-  desc "Delete Temp Keychain"
-  private_lane :delete_temporary_keychain do
-      keychain_name = TEMP_KEYCHAIN_USER
-      keychain_password = TEMP_KEYCHAIN_PASSWORD
-      delete_temp_keychain(name)
   end
 
   desc "Create Temp Keychain"
@@ -111,8 +103,6 @@ platform :ios do
 
   desc "Installs signing certificate in the keychain"
    lane :prepare_signing do |options|
-     puts `ls -ll`
-     puts `pwd`
 
      import_certificate(
        certificate_path: File.absolute_path(ENV["SIGNING_KEY_FILE_PATH"]),
@@ -144,13 +134,13 @@ platform :ios do
       gym(
          workspace:'iosApp.xcworkspace',
          scheme: 'iosApp',
-         clean: true,
-         configuration: "Debug",
-         codesigning_identity: "iPhone Developer: Ashmika Gujaarthi",
-         include_symbols: true,
-         output_directory: "build", # Destination directory. Defaults to current directory.
-         output_name: "develop-app.ipa",
-         export_method: "development"
+#          clean: true,
+#          configuration: "Debug",
+#          codesigning_identity: "iPhone Developer: Ashmika Gujaarthi",
+#          include_symbols: true,
+          output_directory: "build", # Destination directory. Defaults to current directory.
+          output_name: "develop-app.ipa",
+#          export_method: "development"
 #          export_options: {
 #             provisioningProfiles: {
 #                 "com.ciapp.demo" => "iOS Ci Demo Dev Profile",
