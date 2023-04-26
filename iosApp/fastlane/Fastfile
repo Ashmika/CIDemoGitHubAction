@@ -116,11 +116,11 @@ platform :ios do
       puts `ls -ll`
       puts `pwd`
 
-#      sigh(
-#           api_key: app_store_connect_api_key,
-#           provisioning_name: "iOS Ci Demo Dev Profile",
-#           readonly: true
-#       )
+     sigh(
+          api_key: app_store_connect_api_key,
+          provisioning_name: "iOS Ci Demo Dev Profile",
+          readonly: true
+      )
    end
 
 #   desc "Sync Development Certification and Provisioning Profile"
