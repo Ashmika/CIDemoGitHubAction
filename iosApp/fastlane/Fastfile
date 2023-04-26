@@ -112,7 +112,7 @@ platform :ios do
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD
      )
-    install_provisioning_profile(path: "iOS_Ci_Demo_Dev_Profile.mobileprovision")
+      install_provisioning_profile(path: "iosApp/fastlane/iOS_Ci_Demo_Dev_Profile.mobileprovision")
       puts `ls -ll`
       puts `pwd`
 
