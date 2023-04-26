@@ -81,6 +81,7 @@ jobs:
           GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
           SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
           SIGNING_KEY_FILE_PATH: signing-cert.p12
+          SIGNING_KEY_PROFILE_PATH: iOS_Ci_Demo_Dev_Profile.mobileprovision
 
       - name: Upload app-store ipa and dsyms to artifacts
         uses: actions/upload-artifact@v2
