@@ -103,6 +103,8 @@ platform :ios do
 
   desc "Installs signing certificate in the keychain"
    lane :prepare_signing do |options|
+     puts `ls -ll`
+     puts `pwd`
 
      import_certificate(
        certificate_path: File.absolute_path(ENV["SIGNING_KEY_FILE_PATH"]),
@@ -110,6 +112,9 @@ platform :ios do
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD
      )
+
+      puts `ls -ll`
+      puts `pwd`
 
 #      sigh(
 #           api_key: app_store_connect_api_key,
