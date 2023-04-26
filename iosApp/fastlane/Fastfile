@@ -145,7 +145,6 @@ platform :ios do
          configuration: "Debug",
          codesigning_identity: "iPhone Developer: Ashmika Gujaarthi",
          include_symbols: true,
-         export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
          export_options: {
