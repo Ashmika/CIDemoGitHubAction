@@ -41,7 +41,7 @@ jobs:
         env:
             CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
         run: |
-            cd iosApp
+            cd iosApp/fastlane
             echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
 
       - name: Build Gradle
