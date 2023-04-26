@@ -110,11 +110,11 @@ platform :ios do
        keychain_password: TEMP_KEYCHAIN_PASSWORD
      )
 
-     sigh(
-          api_key: app_store_connect_api_key,
-          provisioning_name: "iOS Ci Demo Dev Profile",
-          readonly: true
-      )
+#      sigh(
+#           api_key: app_store_connect_api_key,
+#           provisioning_name: "iOS Ci Demo Dev Profile",
+#           readonly: true
+#       )
    end
 
 #   desc "Sync Development Certification and Provisioning Profile"
@@ -142,11 +142,11 @@ platform :ios do
          export_method: "development",
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
-#          export_options: {
-#             provisioningProfiles: {
-#                 "com.ciapp.demo" => "iOS Ci Demo Dev Profile",
-#               }
-#           }
+         export_options: {
+            provisioningProfiles: {
+                "com.ciapp.demo" => "iOS Ci Demo Dev Profile",
+              }
+          }
       )
 
       delete_temp_keychain(TEMP_KEYCHAIN_USER)
