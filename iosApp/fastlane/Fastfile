@@ -110,6 +110,8 @@ platform :ios do
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD
      )
+
+     
    end
 
   desc "Sync Development Certification and Provisioning Profile"
