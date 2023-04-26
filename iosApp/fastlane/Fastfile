@@ -142,6 +142,7 @@ platform :ios do
          include_symbols: true,
          output_directory: "build", # Destination directory. Defaults to current directory.
          output_name: "develop-app.ipa",
+         export_method: "development",
          export_options: {
             provisioningProfiles: {
                 "com.ciapp.demo" => "iOS Ci Demo Dev Profile",
