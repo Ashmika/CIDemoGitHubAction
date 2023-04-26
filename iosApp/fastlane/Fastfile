@@ -143,6 +143,9 @@ platform :ios do
               }
           }
       )
+
+      delete_temp_keychain(TEMP_KEYCHAIN_USER)
+
    end
 
   desc "Export Development iPA"
