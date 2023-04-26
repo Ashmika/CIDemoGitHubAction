@@ -54,11 +54,19 @@ platform :ios do
   desc "Description of what the lane does"
   lane :develop_build do
       # add actions here: https://docs.fastlane.tools/actions
+      delete_temporary_keychain
       create_temporary_keychain
 #       provisioning_profiles_development
       prepare_signing
       build_for_develop
 
+  end
+
+  desc "Delete Temp Keychain"
+  private_lane :delete_temporary_keychain do
+      keychain_name = TEMP_KEYCHAIN_USER
+      keychain_password = TEMP_KEYCHAIN_PASSWORD
+      delete_temp_keychain(name)
   end
 
   desc "Create Temp Keychain"
