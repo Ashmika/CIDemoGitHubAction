@@ -1,5 +1,5 @@
-git_url("https://github.com/Ashmika/AppleAllCertificates.git")
-storage_mode("git")
-type("development")
-app_identifier("com.ciapp.demo")
-username("ashmikag1992@gmail.com") # Your Apple Developer Portal username
+# git_url("https://github.com/Ashmika/AppleAllCertificates.git")
+# storage_mode("git")
+# type("development")
+# app_identifier("com.ciapp.demo")
+# username("ashmikag1992@gmail.com") # Your Apple Developer Portal username
