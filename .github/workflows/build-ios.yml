@@ -40,9 +40,11 @@ jobs:
       - name: Decode signing certificate into a file
         env:
             CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
+            PROFILE_BASE64: ${{ secrets.IOS_DEVELOPER_PROVISIONAL_PROFILE }}
         run: |
             cd iosApp/fastlane
             echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
+            echo $PROFILE_BASE64 | base64 --decode > iOS_Ci_Demo_Dev_Profile.mobileprovision
 
       - name: Build Gradle
         run: ./gradlew build
