@@ -104,18 +104,18 @@ platform :ios do
    end
 
 
-#   desc "Sync Appstore Certification and Provisioning Profile"
-#     lane :provisioning_profiles_appstore do
-#        match(
-#          type: "appstore",
-#          git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-#          force: true,
-#          keychain_name: TEMP_KEYCHAIN_USER,
-#          keychain_password: TEMP_KEYCHAIN_PASSWORD,
-#          api_key: app_store_connect_api_key,
-#          app_identifier: "com.ciapp.demo"
-#        )
-#     end
+  desc "Sync Appstore Certification and Provisioning Profile"
+    lane :provisioning_profiles_appstore do
+       match(
+         type: "appstore",
+         git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+         force: true,
+         keychain_name: TEMP_KEYCHAIN_USER,
+         keychain_password: TEMP_KEYCHAIN_PASSWORD,
+         api_key: app_store_connect_api_key,
+         app_identifier: "com.ciapp.demo"
+       )
+    end
 
   desc "Export Development iPA"
   lane :build_for_develop do
