@@ -124,7 +124,6 @@ platform :ios do
         create_temporary_keychain
   #       provisioning_profiles_development
         prepare_signing
-        build_for_develop
         gym(
          workspace:'iosApp.xcworkspace',
          scheme: 'iosApp',
