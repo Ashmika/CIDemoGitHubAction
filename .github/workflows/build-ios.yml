@@ -90,8 +90,8 @@ jobs:
           SIGNING_KEY_PROFILE_PATH: iOS_Ci_Demo_Dev_Profile.mobileprovision
 
       - name: Create Appstore iPA and Upload on Testflight
-          if: ${{ github.ref == 'refs/heads/master' }} && github.event.pull_request.merged == true
-          run: cd iosApp && bundle exec fastlane build_for_release --verbose
+        if: github.event.pull_request.merged == true
+        run: cd iosApp && bundle exec fastlane build_for_release --verbose
           env:
             APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
             APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
