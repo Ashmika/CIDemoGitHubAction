@@ -121,11 +121,11 @@ platform :ios do
 
   desc "Export Development iPA"
   lane :build_for_develop do
-       create_temporary_keychain
+        create_temporary_keychain
   #       provisioning_profiles_development
         prepare_signing
         build_for_develop
-      gym(
+        gym(
          workspace:'iosApp.xcworkspace',
          scheme: 'iosApp',
           output_directory: "build", # Destination directory. Defaults to current directory.
@@ -137,10 +137,7 @@ platform :ios do
                  "com.ciapp.demo" => "iOS Ci Demo Dev Profile" # here you can add any additional bundle identifiers and their associated provisioning profiles if you’re also building an app extension or other bundle identifier
                }
           }
-      )
-       delete_temp_keychain(TEMP_KEYCHAIN_USER)
-
-
+        )
    end
 
   desc "Export Development iPA"
