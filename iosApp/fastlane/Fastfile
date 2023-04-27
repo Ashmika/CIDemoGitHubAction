@@ -15,9 +15,174 @@
 
 default_platform(:ios)
 
+APP_STORE_CONNECT_API_KEY_KEY = ENV["APP_STORE_CONNECT_API_KEY_KEY"]
+APP_STORE_CONNECT_API_KEY_ISSUER_ID = ENV["APP_STORE_CONNECT_API_KEY_ISSUER_ID"]
+APP_STORE_CONNECT_API_KEY_KEY_ID = ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"]
+APP_STORE_CONNECT_API_KEY_IN_HOUSE = ENV["APP_STORE_CONNECT_API_KEY_IN_HOUSE"]
+APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 = ENV["APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64"]
+FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD = ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"]
+FASTLANE_USER = ENV["FASTLANE_USER"]
+FASTLANE_PASSWORD = ENV["FASTLANE_PASSWORD"]
+MATCH_PASSWORD = ENV["MATCH_PASSWORD"]
+TEAM_ID = ENV["TEAM_ID"]
+TEMP_KEYCHAIN_USER = ENV["TEMP_KEYCHAIN_USER"]
+TEMP_KEYCHAIN_PASSWORD = ENV["TEMP_KEYCHAIN_PASSWORD"]
+GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
+
+def delete_temp_keychain(name)
+  delete_keychain(
+    name: name
+  ) if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+end
+
+def create_temp_keychain(name, password)
+  create_keychain(
+    name: name,
+    password: password,
+    unlock: false,
+    timeout: 0
+  )
+end
+
+def ensure_temp_keychain(name, password)
+  delete_temp_keychain(name)
+  create_temp_keychain(name, password)
+end
+
 platform :ios do
+
   desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  lane :develop_build do
+      # add actions here: https://docs.fastlane.tools/actions
+      create_temporary_keychain
+#       provisioning_profiles_development
+      prepare_signing
+      build_for_develop
+
   end
+
+  desc "Create Temp Keychain"
+  private_lane :create_temporary_keychain do
+      keychain_name = TEMP_KEYCHAIN_USER
+      keychain_password = TEMP_KEYCHAIN_PASSWORD
+      ensure_temp_keychain(keychain_name, keychain_password)
+  end
+
+#   desc "Install pods via bundle exec"
+#   private_lane :install_pods do
+#      cocoapods(clean_install: true, use_bundle_exec: true)
+#   end
+
+   desc "Increment version Number"
+   private_lane :increments_version_number do
+      increment_version_number(
+         bump_type: "patch", #specify bump type what to increment.Ex. (v2.4.1): the major version number is 2, the minor is 4, the patch is 1.
+         xcodeproj: "iosApp.xcodeproj"
+      )
+  end
+
+  desc "increment build Number"
+  private_lane :increments_build_number do
+      increment_build_number({
+          build_number: latest_testflight_build_number + 1
+        })
+  end
+
+#   desc "Sync Development Certification and Provisioning Profile"
+#   lane :provisioning_profiles_development do
+#      match(
+#        type: "development",
+#        git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+#        force: true,
+#        keychain_name: TEMP_KEYCHAIN_USER,
+#        keychain_password: TEMP_KEYCHAIN_PASSWORD,
+#        api_key: app_store_connect_api_key,
+#        app_identifier: "com.ciapp.demo"
+#      )
+#   end
+
+  desc "Installs signing certificate in the keychain"
+   lane :prepare_signing do |options|
+
+     import_certificate(
+       certificate_path: File.absolute_path(ENV["SIGNING_KEY_FILE_PATH"]),
+       certificate_password: ENV["SIGNING_KEY_PASSWORD"],
+       keychain_name: TEMP_KEYCHAIN_USER,
+       keychain_password: TEMP_KEYCHAIN_PASSWORD
+     )
+      install_provisioning_profile(path: File.absolute_path(ENV["SIGNING_KEY_PROFILE_PATH"]))
+      puts `ls -ll`
+      puts `pwd`
+
+   end
+
+#   desc "Sync Development Certification and Provisioning Profile"
+#     lane :provisioning_profiles_appstore do
+#        match(
+#          type: "appstore",
+#          git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+#          force: true,
+#          keychain_name: TEMP_KEYCHAIN_USER,
+#          keychain_password: TEMP_KEYCHAIN_PASSWORD,
+#          api_key: app_store_connect_api_key,
+#          app_identifier: "com.ciapp.demo"
+#        )
+#     end
+
+  desc "Export Development iPA"
+  lane :build_for_develop do
+      gym(
+         workspace:'iosApp.xcworkspace',
+         scheme: 'iosApp',
+#          clean: true,
+#          configuration: "Debug",
+#          codesigning_identity: "iPhone Developer: Ashmika Gujaarthi",
+#          include_symbols: true,
+          output_directory: "build", # Destination directory. Defaults to current directory.
+          output_name: "develop-app.ipa",
+          configuration: "Release",
+          export_options: {
+               method: "development",
+               provisioningProfiles: {
+                 "com.ciapp.demo" => "iOS Ci Demo Dev Profile" # here you can add any additional bundle identifiers and their associated provisioning profiles if you’re also building an app extension or other bundle identifier
+               }
+          }
+#          export_method: "development"
+#          export_options: {
+#             provisioningProfiles: {
+#                 "com.ciapp.demo" => "iOS Ci Demo Dev Profile",
+#               }
+#           }
+      )
+
+   end
+
+  desc "Export Development iPA"
+  lane :build_for_release do
+         create_temporary_keychain
+         provisioning_profiles_appstore
+         increments_build_number
+         gym(
+              workspace: 'iosApp.xcworkspace',
+              scheme: 'iosApp',
+              clean: true,
+              configuration: "Release",
+              include_symbols: true,
+              export_method: "app-store",
+              output_directory: "build", # Destination directory. Defaults to current directory.
+              output_name: "my-appstore-app.ipa",
+           )
+
+           pilot(
+                 username: FASTLANE_USER,
+                 team_id: TEAM_ID,
+                 skip_waiting_for_build_processing: true,
+                 distribute_external: true,
+                 notify_external_testers: true,
+                 changelog: "test"
+           )
+           delete_temp_keychain(TEMP_KEYCHAIN_USER)
+
+    end
+
 end

@@ -9,12 +9,17 @@ on:
 
 jobs:
   test:
-    runs-on: macos-11
+    runs-on: macOS-latest
+    env:
+        XCODE_VERSION: "14.2"
+        JAVA_VERSION: "14"
     steps:
-      - uses: actions/checkout@v2
-      - uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: latest-stable
+      - name: Select XCode
+        # Use XCODE_VERSION env variable to set the XCode version you want.
+        run: sudo xcode-select --switch /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Set up ruby env
         uses: ruby/setup-ruby@v1.138.0
@@ -27,5 +32,65 @@ jobs:
 
       - name: Install gems
         run: cd iosApp && bundle install
+
+      - uses: actions/setup-java@v1
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Decode signing certificate into a file
+        env:
+            CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
+            PROFILE_BASE64: ${{ secrets.IOS_DEVELOPER_PROVISIONAL_PROFILE }}
+        run: |
+            cd iosApp/fastlane
+            echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
+            echo $PROFILE_BASE64 | base64 --decode > iOS_Ci_Demo_Dev_Profile.mobileprovision
+
+      - name: Build Gradle
+        run: ./gradlew build
+
+      - name: Credentials setup
+        run: |
+          git config --global credential.helper store
+          echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
+
+#      - name: Install Cocoapods
+#        run: |
+#          sudo gem install cocoapods --verbose
+
+      - name: Install Pods
+        run: |
+          pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git --verbose
+          cd iosApp && pod install --verbose
+
+      - name: Build & upload iOS binary
+        run: cd iosApp && bundle exec fastlane develop_build --verbose
+        env:
+          APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+          APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY_IN_HOUSE: ${{ secrets.APP_STORE_CONNECT_API_KEY_IN_HOUSE }}
+          APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+          TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
+          TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
+          GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
+          SIGNING_KEY_FILE_PATH: signing-cert.p12
+          SIGNING_KEY_PROFILE_PATH: iOS_Ci_Demo_Dev_Profile.mobileprovision
+
+      - name: Upload app-store ipa and dsyms to artifacts
+        uses: actions/upload-artifact@v2
+        with:
+            name: development ipa & dsyms
+            path: |
+              ${{ github.workspace }}/iosApp/build/develop-app.ipa
+              ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
+
+#
 
 

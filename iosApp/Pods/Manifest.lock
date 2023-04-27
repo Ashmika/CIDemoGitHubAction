@@ -3,21 +3,19 @@ PODS:
   - shared (1.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (from `~/.cocoapods/repos/allpodsdemo/Alamofire.podspec`)
   - shared (from `../shared`)
 
-SPEC REPOS:
-  trunk:
-    - Alamofire
-
 EXTERNAL SOURCES:
+  Alamofire:
+    :path: "~/.cocoapods/repos/allpodsdemo/Alamofire.podspec"
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
-  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Alamofire: accf13792480b5e9bf362d4977f246081e174487
   shared: 07cac7993e4f05eda6b76f3a213b070947c3b79f
 
-PODFILE CHECKSUM: 2fc58925de01ad2b4c0ad362fcb801defa9d5ea0
+PODFILE CHECKSUM: 64645ea85ece67f67ddf23eb777c65899f2c98ba
 
 COCOAPODS: 1.12.0
