@@ -69,7 +69,6 @@ jobs:
           cd iosApp && pod install --verbose
 
       - name: Create Develop Build and iPA
-        if: ${{ github.ref == 'refs/heads/develop' }}
         run: cd iosApp && bundle exec fastlane build_for_develop --verbose
         env:
           APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
