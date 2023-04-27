@@ -15,6 +15,8 @@
 
 default_platform(:ios)
 
+# Add the Environment variables
+
 APP_STORE_CONNECT_API_KEY_KEY = ENV["APP_STORE_CONNECT_API_KEY_KEY"]
 APP_STORE_CONNECT_API_KEY_ISSUER_ID = ENV["APP_STORE_CONNECT_API_KEY_ISSUER_ID"]
 APP_STORE_CONNECT_API_KEY_KEY_ID = ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"]
@@ -58,12 +60,7 @@ platform :ios do
       ensure_temp_keychain(keychain_name, keychain_password)
   end
 
-#   desc "Install pods via bundle exec"
-#   private_lane :install_pods do
-#      cocoapods(clean_install: true, use_bundle_exec: true)
-#   end
-
-   desc "Increment version Number"
+  desc "Increment version Number"
    private_lane :increments_version_number do
       increment_version_number(
          bump_type: "patch", #specify bump type what to increment.Ex. (v2.4.1): the major version number is 2, the minor is 4, the patch is 1.
@@ -75,7 +72,7 @@ platform :ios do
   private_lane :increments_build_number do
       increment_build_number({
           build_number: latest_testflight_build_number + 1
-        })
+       })
   end
 
   desc "Sync Development Certification and Provisioning Profile"
@@ -92,32 +89,33 @@ platform :ios do
   end
 
   desc "Installs signing certificate in the keychain"
-   lane :prepare_signing do |options|
-
+  lane :prepare_signing do
      import_certificate(
        certificate_path: File.absolute_path(ENV["SIGNING_KEY_FILE_PATH"]),
        certificate_password: ENV["SIGNING_KEY_PASSWORD"],
        keychain_name: TEMP_KEYCHAIN_USER,
        keychain_password: TEMP_KEYCHAIN_PASSWORD
      )
+
       install_provisioning_profile(path: File.absolute_path(ENV["SIGNING_KEY_PROFILE_PATH"]))
+
       puts `ls -ll`
       puts `pwd`
-
    end
 
-  desc "Sync Development Certification and Provisioning Profile"
-    lane :provisioning_profiles_appstore do
-       match(
-         type: "appstore",
-         git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-         force: true,
-         keychain_name: TEMP_KEYCHAIN_USER,
-         keychain_password: TEMP_KEYCHAIN_PASSWORD,
-         api_key: app_store_connect_api_key,
-         app_identifier: "com.ciapp.demo"
-       )
-    end
+
+#   desc "Sync Appstore Certification and Provisioning Profile"
+#     lane :provisioning_profiles_appstore do
+#        match(
+#          type: "appstore",
+#          git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+#          force: true,
+#          keychain_name: TEMP_KEYCHAIN_USER,
+#          keychain_password: TEMP_KEYCHAIN_PASSWORD,
+#          api_key: app_store_connect_api_key,
+#          app_identifier: "com.ciapp.demo"
+#        )
+#     end
 
   desc "Export Development iPA"
   lane :build_for_develop do
@@ -127,14 +125,14 @@ platform :ios do
         gym(
          workspace:'iosApp.xcworkspace',
          scheme: 'iosApp',
-          output_directory: "build", # Destination directory. Defaults to current directory.
-          output_name: "develop-app.ipa",
-          configuration: "Release",
-          export_options: {
-               method: "development",
-               provisioningProfiles: {
+         output_directory: "build", # Destination directory. Defaults to current directory.
+         output_name: "develop-app.ipa",
+         configuration: "Release",
+         export_options: {
+             method: "development",
+             provisioningProfiles: {
                  "com.ciapp.demo" => "iOS Ci Demo Dev Profile" # here you can add any additional bundle identifiers and their associated provisioning profiles if you’re also building an app extension or other bundle identifier
-               }
+             }
           }
         )
    end
