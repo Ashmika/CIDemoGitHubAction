@@ -1,27 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-38:/values-bs/values-bs.xml",
+            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-42:/values-bs/values-bs.xml",
             "map": [
                 {
-                    "source": "/Users/gs-user/.gradle/caches/transforms-3/10af01da8d8ad8ad312dcbdf948c252a/transformed/core-1.8.0/res/values-bs/values-bs.xml",
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\af3b7abf69a21dec9172d82c3a4c03b0\\transformed\\play-services-basement-18.1.0\\res\\values-bs\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "136",
+                        "endOffsets": "331"
                     },
                     "to": {
-                        "startLines": "16",
+                        "startLines": "4",
                         "startColumns": "4",
-                        "startOffsets": "1309",
-                        "endColumns": "100",
-                        "endOffsets": "1405"
+                        "startOffsets": "294",
+                        "endColumns": "140",
+                        "endOffsets": "430"
                     }
                 },
                 {
-                    "source": "/Users/gs-user/.gradle/caches/transforms-3/8a9fa4897afb2cc09138c2b3bc80f44b/transformed/ui-1.2.1/res/values-bs/values-bs.xml",
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\88534de06296ca38b0b7abcff4e2a77a\\transformed\\ui-1.2.1\\res\\values-bs\\values-bs.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -30,11 +30,28 @@
                         "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1145,1231,1304,1374,1492"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
+                        "startLines": "2,3,5,6,7,8,9,10,11,12,13,14,15,16,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,206,294,388,487,573,650,749,841,926,998,1069,1150,1236,1410,1480",
+                        "startOffsets": "105,206,435,529,628,714,791,890,982,1067,1139,1210,1291,1377,1551,1621",
                         "endColumns": "100,87,93,98,85,76,98,91,84,71,70,80,85,72,69,117",
-                        "endOffsets": "201,289,383,482,568,645,744,836,921,993,1064,1145,1231,1304,1475,1593"
+                        "endOffsets": "201,289,524,623,709,786,885,977,1062,1134,1205,1286,1372,1445,1616,1734"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\c976f3ae723950203f434c79aa2821e1\\transformed\\core-1.8.0\\res\\values-bs\\values-bs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "1450",
+                        "endColumns": "100",
+                        "endOffsets": "1546"
                     }
                 }
             ]

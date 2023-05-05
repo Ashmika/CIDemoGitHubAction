@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-38:/values-or/values-or.xml",
+            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-42:/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "/Users/gs-user/.gradle/caches/transforms-3/8a9fa4897afb2cc09138c2b3bc80f44b/transformed/ui-1.2.1/res/values-or/values-or.xml",
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\af3b7abf69a21dec9172d82c3a4c03b0\\transformed\\play-services-basement-18.1.0\\res\\values-or\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "289",
+                        "endColumns": "139",
+                        "endOffsets": "424"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\88534de06296ca38b0b7abcff4e2a77a\\transformed\\ui-1.2.1\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -13,15 +30,15 @@
                         "endOffsets": "197,284,376,476,562,639,750,838,925,995,1065,1143,1225,1295,1362,1481"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18",
+                        "startLines": "2,3,5,6,7,8,9,10,11,12,13,14,15,16,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,289,381,481,567,644,755,843,930,1000,1070,1148,1230,1401,1468",
+                        "startOffsets": "105,202,429,521,621,707,784,895,983,1070,1140,1210,1288,1370,1541,1608",
                         "endColumns": "96,86,91,99,85,76,110,87,86,69,69,77,81,69,66,118",
-                        "endOffsets": "197,284,376,476,562,639,750,838,925,995,1065,1143,1225,1295,1463,1582"
+                        "endOffsets": "197,284,516,616,702,779,890,978,1065,1135,1205,1283,1365,1435,1603,1722"
                     }
                 },
                 {
-                    "source": "/Users/gs-user/.gradle/caches/transforms-3/10af01da8d8ad8ad312dcbdf948c252a/transformed/core-1.8.0/res/values-or/values-or.xml",
+                    "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\c976f3ae723950203f434c79aa2821e1\\transformed\\core-1.8.0\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,11 +47,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "16",
+                        "startLines": "17",
                         "startColumns": "4",
-                        "startOffsets": "1300",
+                        "startOffsets": "1440",
                         "endColumns": "100",
-                        "endOffsets": "1396"
+                        "endOffsets": "1536"
                     }
                 }
             ]

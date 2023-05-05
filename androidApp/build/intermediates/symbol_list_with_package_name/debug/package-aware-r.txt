@@ -1,5 +1,6 @@
 com.example.cidemogithubaction.android
 attr alpha
+attr coordinatorLayoutStyle
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts
@@ -11,10 +12,18 @@ attr fontProviderSystemFontFamily
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
+attr keylines
 attr lStar
+attr layout_anchor
+attr layout_anchorGravity
+attr layout_behavior
+attr layout_dodgeInsetEdges
+attr layout_insetEdge
+attr layout_keyline
 attr nestedScrollViewStyle
 attr queryPatterns
 attr shortcutMatchRequired
+attr statusBarBackground
 attr ttcIndex
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
@@ -94,13 +103,24 @@ id action_divider
 id action_image
 id action_text
 id actions
+id all
 id androidx_compose_ui_view_composition_context
 id async
 id blocking
+id bottom
+id center
+id center_horizontal
+id center_vertical
 id chronometer
+id clip_horizontal
+id clip_vertical
 id compose_view_saveable_id_tag
 id consume_window_insets_tag
 id dialog_button
+id end
+id fill
+id fill_horizontal
+id fill_vertical
 id forever
 id hide_in_inspector_tag
 id icon
@@ -109,15 +129,19 @@ id info
 id inspection_slot_table_set
 id is_pooling_container_tag
 id italic
+id left
 id line1
 id line3
+id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
 id pooling_container_listener_holder_tag
+id right
 id right_icon
 id right_side
+id start
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -135,11 +159,13 @@ id text
 id text2
 id time
 id title
+id top
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id wrapped_composition_tag
+integer google_play_services_version
 integer status_bar_notification_info_maxnum
 layout custom_dialog
 layout notification_action
@@ -148,18 +174,27 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+raw firebase_common_keep
 string androidx_startup
 string close_drawer
 string close_sheet
+string common_google_play_services_unknown_issue
 string default_error_message
 string default_popup_window_title
+string default_web_client_id
 string dropdown_menu
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string in_progress
 string indeterminate
 string navigation_menu
 string not_selected
 string off
 string on
+string project_id
 string range_end
 string range_start
 string selected
@@ -175,8 +210,11 @@ style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
+style Widget_Support_CoordinatorLayout
 styleable Capability queryPatterns shortcutMatchRequired
 styleable ColorStateListItem android_color android_alpha android_lStar alpha lStar
+styleable CoordinatorLayout keylines statusBarBackground
+styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
