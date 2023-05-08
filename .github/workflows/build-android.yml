@@ -57,7 +57,8 @@ jobs:
 
       - name: Create libs folder and clone repository
         run: |
-          mkdir libs && cd libs && git clone https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com:DemoAndroidLocalLibs . --verbose && ls DemoAndroidLocalLibs
+          mkdir libs && git clone git:Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/DemoAndroidLocalLibs.git libs --verbose && ls 
+#          mkdir libs && cd libs && git clone https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/DemoAndroidLocalLibs.git --verbose && ls DemoAndroidLocalLibs
 
       - name: Build Gradle
         run: ./gradlew assembleDebug
