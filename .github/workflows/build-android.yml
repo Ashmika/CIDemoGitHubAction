@@ -50,12 +50,14 @@ jobs:
 #          restore-keys: |
 #            ${{ runner.os }}-gradle-
 
-      - name: Create libs folder and clone repository
+      - name: Credentials setup
         run: |
-          mkdir libs && cd libs
           git config --global credential.helper store
           echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
-          git clone https://github.com/Ashmika/DemoAndroidLocalLibs.git
+
+      - name: Create libs folder and clone repository
+        run: |
+          mkdir libs && cd libs && git clone https://github.com/Ashmika/DemoAndroidLocalLibs.git
 
       - name: Build Gradle
         run: ./gradlew assembleDebug
