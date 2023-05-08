@@ -46,6 +46,10 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
 
 
+    implementation(files("..//libs//utils_4.8.1.jar"))
+    implementation(files("..//libs//sandbox_4.8.1.jar"))
+    implementation(files("..//libs//shadowapi_4.8.1.jar"))
+    implementation(files("..//libs//loupe_1.2.2.aar"))
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics-ktx")

@@ -18,6 +18,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cidemogithubaction.Greeting
 
+import com.igreenwood.loupesample.R
+import com.igreenwood.loupesample.databinding.ActivityMasterBinding
+import com.igreenwood.loupesample.detail.DetailActivity
+import com.igreenwood.loupesample.master.item.MultipleImageItem
+import com.igreenwood.loupesample.master.item.SingleImageItem
+import com.igreenwood.loupesample.util.ImageUrls
+
 @Composable
 fun MyApplicationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
