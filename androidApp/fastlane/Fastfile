@@ -49,6 +49,7 @@ platform :android do
      firebase_app_distribution(
           service_credentials_file: "androidApp/google-services.json",
           app: ENV['FIREBASE_APP_ID'],
+          android_artifact_type: "AAB"
           release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
           groups_file: "FirebaseAppDistributionConfig/groups.txt"
           )
