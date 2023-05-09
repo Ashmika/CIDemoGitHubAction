@@ -47,7 +47,7 @@ platform :android do
   lane :distribute do
 #           gradle(task: "clean assembleRelease")
      firebase_app_distribution(
-          service_credentials_file: "androidApp/google-services.json",
+          service_credentials_file: "firebase_login_credentials.json",
           app: ENV['FIREBASE_APP_ID'],
           android_artifact_type: "APK",
           release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
