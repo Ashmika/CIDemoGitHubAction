@@ -60,8 +60,8 @@ jobs:
           rm -r libs && mkdir libs && git clone https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/DemoAndroidLocalLibs.git libs --verbose && ls libs
 #          mkdir libs && cd libs && git clone https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/DemoAndroidLocalLibs.git --verbose && ls DemoAndroidLocalLibs
 
-      - name: Build Gradle
-        run: ./gradlew assembleDebug
+#      - name: Build Gradle
+#        run: ./gradlew assembleDebug
 
 #      - name: Create Debug APK
 #        run: cd androidApp && bundle exec fastlane build_dev --verbose
