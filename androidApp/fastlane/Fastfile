@@ -45,11 +45,12 @@ platform :android do
 
   desc "Lane for distributing app using Firebase App Distributions"
   lane :distribute do
-#           gradle(task: "clean assembleRelease")
+     gradle(task: "clean assembleDebug")
      firebase_app_distribution(
           service_credentials_file: "firebase_login_credentials.json",
           app: ENV['FIREBASE_APP_ID'],
           android_artifact_type: "APK",
+          apk_path:"./androidApp/build/outputs/apk/debug"
           release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
           groups_file: "FirebaseAppDistributionConfig/groups.txt"
           )
