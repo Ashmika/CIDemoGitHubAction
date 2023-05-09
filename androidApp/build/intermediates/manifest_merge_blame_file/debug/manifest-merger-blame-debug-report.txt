@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+8-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+9-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->[com.google.android.gms:play-services-measurement-api:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\37b6fbcf4ccec808e6eac6cae57807e3\transformed\play-services-measurement-api-21.2.2\AndroidManifest.xml:22:5-67
@@ -27,31 +27,31 @@
 15-->[com.google.android.gms:play-services-measurement:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\f830f8123c673444f7c9b898d084fc89\transformed\play-services-measurement-21.2.2\AndroidManifest.xml:26:22-107
 16
 17    <application
-17-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:4:5-16:19
+17-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:4:5-16:19
 18        android:allowBackup="false"
-18-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:5:9-36
+18-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:5:9-36
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 19-->[androidx.core:core:1.8.0] C:\Users\GS2836\.gradle\caches\transforms-3\c976f3ae723950203f434c79aa2821e1\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 20        android:debuggable="true"
 21        android:supportsRtl="true"
-21-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:6:9-35
+21-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:6:9-35
 22        android:theme="@style/AppTheme" >
-22-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:7:9-40
+22-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:7:9-40
 23        <activity
-23-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:8:9-15:20
+23-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:8:9-15:20
 24            android:name="com.example.cidemogithubaction.android.MainActivity"
-24-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:9:13-41
+24-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:9:13-41
 25            android:exported="true" >
-25-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:10:13-36
+25-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:10:13-36
 26            <intent-filter>
-26-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:11:13-14:29
+26-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:11:13-14:29
 27                <action android:name="android.intent.action.MAIN" />
-27-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:17-69
-27-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:25-66
+27-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:17-69
+27-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:25-66
 28
 29                <category android:name="android.intent.category.LAUNCHER" />
-29-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:17-77
-29-->D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:27-74
+29-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:17-77
+29-->D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:27-74
 30            </intent-filter>
 31        </activity>
 32

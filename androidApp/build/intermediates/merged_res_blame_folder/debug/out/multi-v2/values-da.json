@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-42:/values-da/values-da.xml",
+            "outputFile": "com.example.cidemogithubaction.android.androidApp-mergeDebugResources-43:/values-da/values-da.xml",
             "map": [
                 {
                     "source": "C:\\Users\\GS2836\\.gradle\\caches\\transforms-3\\af3b7abf69a21dec9172d82c3a4c03b0\\transformed\\play-services-basement-18.1.0\\res\\values-da\\values.xml",

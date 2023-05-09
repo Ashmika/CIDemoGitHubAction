@@ -1,10 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-MERGED from [:shared] D:\HoTGitProjects\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+MERGED from [loupe_1.2.2.aar] C:\Users\GS2836\.gradle\caches\transforms-3\a0e469f1b9bb279a241f1f37365d30e5\transformed\loupe_1.2.2\AndroidManifest.xml:2:1-9:12
+MERGED from [:shared] D:\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\GS2836\.gradle\caches\transforms-3\e321a8a81ce492a4ed1c296e6c4b585a\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.compose.ui:ui-tooling:1.2.1] C:\Users\GS2836\.gradle\caches\transforms-3\47a2dd3608686ba4dd8b0036a8975a99\transformed\ui-tooling-1.2.1\AndroidManifest.xml:17:1-29:12
@@ -79,25 +80,25 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\GS2836\.gradle\caches\transfor
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\GS2836\.gradle\caches\transforms-3\bc5e4678f07df984d4be0a0420503319\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\GS2836\.gradle\caches\transforms-3\76553d3c21f789ceeae6b7cdca5d990f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\GS2836\.gradle\caches\transforms-3\3d9f8e48426920fae59d37ddfb7b373a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
 	package
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:1-17:12
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:4:5-16:19
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:4:5-16:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\GS2836\.gradle\caches\transforms-3\e321a8a81ce492a4ed1c296e6c4b585a\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:10:5-18:19
@@ -141,33 +142,35 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\GS2836\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\GS2836\.gradle\caches\transforms-3\c976f3ae723950203f434c79aa2821e1\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:6:9-35
 	android:allowBackup
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:5:9-36
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:5:9-36
 	android:theme
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:7:9-40
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:7:9-40
 activity#com.example.cidemogithubaction.android.MainActivity
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:8:9-15:20
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:8:9-15:20
 	android:exported
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:10:13-36
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:10:13-36
 	android:name
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:9:13-41
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:9:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:11:13-14:29
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:11:13-14:29
 action#android.intent.action.MAIN
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:17-69
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:17-69
 	android:name
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:25-66
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:12:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:17-77
+ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:17-77
 	android:name
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:27-74
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml:13:27-74
 uses-sdk
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-MERGED from [:shared] D:\HoTGitProjects\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:shared] D:\HoTGitProjects\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+MERGED from [loupe_1.2.2.aar] C:\Users\GS2836\.gradle\caches\transforms-3\a0e469f1b9bb279a241f1f37365d30e5\transformed\loupe_1.2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [loupe_1.2.2.aar] C:\Users\GS2836\.gradle\caches\transforms-3\a0e469f1b9bb279a241f1f37365d30e5\transformed\loupe_1.2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared] D:\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared] D:\CIDemoGitHubAction\shared\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\GS2836\.gradle\caches\transforms-3\e321a8a81ce492a4ed1c296e6c4b585a\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:5:5-7:41
@@ -316,16 +319,16 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\GS2836\.gradle
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\GS2836\.gradle\caches\transforms-3\76553d3c21f789ceeae6b7cdca5d990f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\GS2836\.gradle\caches\transforms-3\3d9f8e48426920fae59d37ddfb7b373a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\GS2836\.gradle\caches\transforms-3\3d9f8e48426920fae59d37ddfb7b373a\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		ADDED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
-		INJECTED from D:\HoTGitProjects\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		ADDED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
+		INJECTED from D:\CIDemoGitHubAction\androidApp\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.2] C:\Users\GS2836\.gradle\caches\transforms-3\5e47d8819b6f8dfc7a56bf0385a92cb6\transformed\firebase-analytics-ktx-21.2.2\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\GS2836\.gradle\caches\transforms-3\e321a8a81ce492a4ed1c296e6c4b585a\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:11:9-17:19

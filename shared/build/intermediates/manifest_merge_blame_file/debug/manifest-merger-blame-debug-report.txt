@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="21"
-6-->D:\HoTGitProjects\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5539007171954193511.xml
+6-->D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest12629833026013057280.xml
 7        android:targetSdkVersion="32" />
-7-->D:\HoTGitProjects\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5539007171954193511.xml
+7-->D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest12629833026013057280.xml
 8
 9</manifest>
