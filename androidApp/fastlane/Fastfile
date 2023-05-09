@@ -50,7 +50,7 @@ platform :android do
      firebase_app_distribution(
          service_credentials_file: "firebase_login_credentials.json",
          app: "1:1751770048:android:d04ff31652da4755609e25", #ENV['FIREBASE_APP_ID'],
-         #android_artifact_type: "APK",
+         android_artifact_type: "AAB",
          apk_path: "../androidApp/build/outputs/apk/debug/",
          release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
          groups_file: "FirebaseAppDistributionConfig/groups.txt"
