@@ -74,7 +74,7 @@ jobs:
             ${{ github.workspace }}/androidApp/build/outputs/apk/debug
 
       - name: Distribute app with Firebase App Distribution Fastlane
-        run: bundle exec fastlane distribute
+        run: cd androidApp && bundle exec fastlane distribute
         env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
 
