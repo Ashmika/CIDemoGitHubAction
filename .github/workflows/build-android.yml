@@ -80,6 +80,7 @@ jobs:
         run: |
             cd androidApp/fastlane
             echo $FIREBASE_LOGIN_CREDENTIALS | base64 --decode > firebase_login_credentials.json
+            ls androidApp/fastlane
 
       - name: Distribute app with Firebase App Distribution Fastlane
         run: cd androidApp && bundle exec fastlane distribute
