@@ -101,5 +101,6 @@ jobs:
         run: cd androidApp && bundle exec fastlane distribute --verbose
         env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
           FIREBASE_LOGIN_CREDENTIALS: fastlane/firebase_credentials.json
 

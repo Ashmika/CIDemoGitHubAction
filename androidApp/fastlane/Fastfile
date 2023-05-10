@@ -43,11 +43,21 @@ platform :android do
   )
   end
 
+  desc "Increment version code"
+  lane :increment_vc do
+    increment_version_code(
+         gradle_file_path: "./androidApp/build.gradle.kts",
+
+    )
+   end
+
   desc "Lane for distributing app using Firebase App Distributions"
   lane :distribute do
+     increment_vc
      gradle(task: "clean assembleDebug", project_dir: '../')
      firebase_app_distribution(
          service_credentials_file: ENV["FIREBASE_LOGIN_CREDENTIALS"],
+         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
          app: ENV["FIREBASE_APP_ID"],
          release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
          groups_file: "FirebaseAppDistributionConfig/groups.txt"
