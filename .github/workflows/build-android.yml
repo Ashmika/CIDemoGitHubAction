@@ -98,7 +98,7 @@ jobs:
         #    ls
 
       - name: Distribute app with Firebase App Distribution Fastlane
-        run: cd androidApp && bundle exec fastlane distribute
+        run: cd androidApp && bundle exec fastlane distribute --verbose
         env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
           FIREBASE_LOGIN_CREDENTIALS: firebase_credentials.json
