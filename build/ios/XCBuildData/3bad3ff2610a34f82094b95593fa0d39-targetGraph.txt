@@ -1,9 +1,0 @@
-Target dependency graph (4 targets)
-Alamofire in Pods, no dependencies
-shared in Pods, no dependencies
-Pods-iosApp in Pods, depends on:
-Alamofire in Pods (explicit)
-shared in Pods (explicit)
-iosApp in iosApp, depends on:
-Pods-iosApp in Pods (implicit dependency via file 'Pods_iosApp.framework' in build phase 'Link Binary')
-Alamofire in Pods (implicit dependency via options '-framework Alamofire' in build setting 'OTHER_LDFLAGS')

@@ -73,8 +73,17 @@ jobs:
           path: |
             ${{ github.workspace }}/androidApp/build/outputs/apk/debug
 
+
+      - name: Create Firebase Service Credentials file
+        env:
+          FIREBASE_LOGIN_CREDENTIALS: ${{ secrets.FIREBASE_LOGIN_CREDENTIALS }}
+        run: |
+            cd iosApp/fastlane
+            echo $FIREBASE_LOGIN_CREDENTIALS | base64 --decode > firebase_login_credentials.json
+
       - name: Distribute app with Firebase App Distribution Fastlane
         run: cd androidApp && bundle exec fastlane distribute
         env:
           FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          FIREBASE_LOGIN_CREDENTIALS_PATH: firebase_login_credentials.json
 

@@ -39,19 +39,16 @@ platform :android do
   desc "Build dev"
   lane :build_dev do
     gradle(task: "assemble",
-    build_type: "debug" , project_dir: '../' #this is supposed to make debug build
+    build_type: "Debug" , project_dir: '../' #this is supposed to make debug build
   )
   end
 
   desc "Lane for distributing app using Firebase App Distributions"
   lane :distribute do
-#      gradle(task: "clean assembleDebug")
-     build_dev
+     gradle(task: "clean assembleDebug", project_dir: '../')
      firebase_app_distribution(
-         service_credentials_file: "firebase_login_credentials.json",
-         app: "1:1751770048:android:d04ff31652da4755609e25", #ENV['FIREBASE_APP_ID'],
-         android_artifact_type: "AAB",
-         apk_path: "../androidApp/build/outputs/apk/debug/",
+         service_credentials_file: File.absolute_path(ENV['FIREBASE_LOGIN_CREDENTIALS_PATH']),
+         app: ENV['FIREBASE_APP_ID'],
          release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
          groups_file: "FirebaseAppDistributionConfig/groups.txt"
      )
