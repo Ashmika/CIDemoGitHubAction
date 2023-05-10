@@ -73,7 +73,6 @@ jobs:
           path: |
             ${{ github.workspace }}/androidApp/build/outputs/apk/debug
 
-
       - name: Create Firebase Service Credentials file
         run: |
           cd androidApp/fastlane
