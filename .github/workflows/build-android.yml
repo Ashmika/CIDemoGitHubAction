@@ -78,7 +78,7 @@ jobs:
         env:
           FIREBASE_LOGIN_CREDENTIALS: ${{ secrets.FIREBASE_LOGIN_CREDENTIALS }}
         run: |
-            cd iosApp/fastlane
+            cd androidApp/fastlane
             echo $FIREBASE_LOGIN_CREDENTIALS | base64 --decode > firebase_login_credentials.json
 
       - name: Distribute app with Firebase App Distribution Fastlane
