@@ -47,7 +47,7 @@ platform :android do
   lane :distribute do
      gradle(task: "clean assembleDebug", project_dir: '../')
      firebase_app_distribution(
-         service_credentials_file: File.absolute_path(ENV['FIREBASE_LOGIN_CREDENTIALS_PATH']),
+         service_credentials_file: ENV['FIREBASE_LOGIN_CREDENTIALS_PATH'],
          app: ENV['FIREBASE_APP_ID'],
          release_notes_file: "FirebaseAppDistributionConfig/release_notes.txt",
          groups_file: "FirebaseAppDistributionConfig/groups.txt"
