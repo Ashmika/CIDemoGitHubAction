@@ -47,6 +47,14 @@ Deploy a new version to the Google Play
 
 Build dev
 
+### android increment_vc
+
+```sh
+[bundle exec] fastlane android increment_vc
+```
+
+Increment version code
+
 ### android distribute
 
 ```sh
