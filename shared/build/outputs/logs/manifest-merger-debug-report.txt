@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml:2:13-3:59
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml:2:13-3:59
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml:2:13-3:59
+ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml:2:13-3:59
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml:2:13-3:59
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml:2:13-3:59
 	package
-		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml:3:16-56
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
+		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml:3:16-56
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
 	xmlns:android
-		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml:2:23-81
+		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml:2:23-81
 uses-sdk
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml reason: use-sdk injection requested
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml reason: use-sdk injection requested
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
 	android:targetSdkVersion
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
 	android:minSdkVersion
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
-		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest5430987371551301512.xml
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+		ADDED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
+		INJECTED from D:\CIDemoGitHubAction\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest10486268516417893524.xml
