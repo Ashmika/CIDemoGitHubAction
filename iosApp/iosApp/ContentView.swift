@@ -1,11 +1,11 @@
 import SwiftUI
-import shared
+//import shared
 import Alamofire
 struct ContentView: View {
-	let greet = Greeting().greeting()
+	//let greet = Greeting().greeting()
 
 	var body: some View {
-		Text(greet)
+		//Text(greet)
         Text("My Demo App test with pod local repo")
 	}
 }
