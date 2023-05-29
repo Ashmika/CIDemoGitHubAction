@@ -158,6 +158,7 @@ platform :ios do
          create_temporary_keychain
     #     provisioning_profiles_appstore
          prepare_dist_signing
+         
          increments_build_number
 #          gym(
 #               workspace: 'iosApp.xcworkspace',
