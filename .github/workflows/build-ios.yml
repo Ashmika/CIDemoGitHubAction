@@ -110,7 +110,7 @@ jobs:
           TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
           TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
           GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
-          DIST_SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
+          DIST_SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DIST_PASSWORD }}
           DIST_SIGNING_KEY_FILE_PATH: signing-dist-cert.p12
           DIST_SIGNING_KEY_PROFILE_PATH: iOS_Ci_DIST_Profile.mobileprovision
 
