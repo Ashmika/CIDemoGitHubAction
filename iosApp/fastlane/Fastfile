@@ -103,6 +103,21 @@ platform :ios do
       puts `pwd`
    end
 
+   desc "Installs signing certificate in the keychain"
+     lane :prepare_dist_signing do
+        import_certificate(
+          certificate_path: File.absolute_path(ENV["DIST_SIGNING_KEY_FILE_PATH"]),
+          certificate_password: ENV["DIST_SIGNING_KEY_PASSWORD"],
+          keychain_name: TEMP_KEYCHAIN_USER,
+          keychain_password: TEMP_KEYCHAIN_PASSWORD
+        )
+
+         install_provisioning_profile(path: File.absolute_path(ENV["DIST_SIGNING_KEY_PROFILE_PATH"]))
+
+         puts `ls -ll`
+         puts `pwd`
+      end
+
 
   desc "Sync Appstore Certification and Provisioning Profile"
     lane :provisioning_profiles_appstore do
@@ -139,26 +154,38 @@ platform :ios do
 
   desc "Export Development iPA"
   lane :build_for_release do
+         app_store_connect_api_key
          create_temporary_keychain
-         provisioning_profiles_appstore
+    #     provisioning_profiles_appstore
+         prepare_dist_signing
          increments_build_number
-         gym(
-              workspace: 'iosApp.xcworkspace',
-              scheme: 'iosApp',
-              clean: true,
-              configuration: "Release",
-              include_symbols: true,
-              export_method: "app-store",
-              output_directory: "build", # Destination directory. Defaults to current directory.
-              output_name: "my-appstore-app.ipa",
-           )
+#          gym(
+#               workspace: 'iosApp.xcworkspace',
+#               scheme: 'iosApp',
+#               clean: true,
+#               configuration: "Release",
+#               include_symbols: true,
+#               export_method: "app-store",
+#               output_directory: "build", # Destination directory. Defaults to current directory.
+#               output_name: "my-appstore-app.ipa",
+#            )
+
+          gym(
+                   workspace:'iosApp.xcworkspace',
+                   scheme: 'iosApp',
+                   output_directory: "build", # Destination directory. Defaults to current directory.
+                   output_name: "my-appstore-app1.ipa",
+                   configuration: "Release",
+                   export_options: {
+                       method: "app-store",
+                       provisioningProfiles: {
+                           "com.ciapp.demo" => "iOS Distribution CI Demo" # here you can add any additional bundle identifiers and their associated provisioning profiles if you’re also building an app extension or other bundle identifier
+                       }
+                    }
+                  )
 
            pilot(
-                 username: FASTLANE_USER,
-                 team_id: TEAM_ID,
                  skip_waiting_for_build_processing: true,
-                 distribute_external: true,
-                 notify_external_testers: true,
                  changelog: "test"
            )
            delete_temp_keychain(TEMP_KEYCHAIN_USER)

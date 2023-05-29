@@ -7,7 +7,7 @@ on:
       - develop
   pull_request:
     branches:
-       - master
+      - master
     types: [closed ]
   workflow_dispatch:
 
@@ -15,8 +15,8 @@ jobs:
   test:
     runs-on: macOS-latest
     env:
-        XCODE_VERSION: "14.2"
-        JAVA_VERSION: "14"
+      XCODE_VERSION: "14.2"
+      JAVA_VERSION: "14"
     steps:
       - name: Select XCode
         # Use XCODE_VERSION env variable to set the XCode version you want.
@@ -43,12 +43,16 @@ jobs:
 
       - name: Decode signing certificate into a file
         env:
-            CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
-            PROFILE_BASE64: ${{ secrets.IOS_DEVELOPER_PROVISIONAL_PROFILE }}
+          CERTIFICATE_BASE64: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY }}
+          PROFILE_BASE64: ${{ secrets.IOS_DEVELOPER_PROVISIONAL_PROFILE }}
+          DIST_CERTIFICATE_BASE64: ${{ secrets.IOS_DIST_CERT }}
+          DIST_PROFILE_BASE64: ${{ secrets.IOS_DIST_PROFILE }}
         run: |
-            cd iosApp/fastlane
-            echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
-            echo $PROFILE_BASE64 | base64 --decode > iOS_Ci_Demo_Dev_Profile.mobileprovision
+          cd iosApp/fastlane
+          echo $CERTIFICATE_BASE64 | base64 --decode > signing-cert.p12
+          echo $PROFILE_BASE64 | base64 --decode > iOS_Ci_Demo_Dev_Profile.mobileprovision
+          echo $DIST_CERTIFICATE_BASE64 | base64 --decode > signing-dist-cert.p12
+          echo $DIST_PROFILE_BASE64 | base64 --decode > iOS_Ci_DIST_Profile.mobileprovision
 
       - name: Build Gradle
         run: ./gradlew build
@@ -58,18 +62,40 @@ jobs:
           git config --global credential.helper store
           echo "https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com" > ~/.git-credentials
 
-#      - name: Install Cocoapods
-#        run: |
-#          sudo gem install cocoapods --verbose
+      #      - name: Install Cocoapods
+      #        run: |
+      #          sudo gem install cocoapods --verbose
 
       - name: Install Pods
         run: |
           pod repo add allpodsdemo https://Ashmika:${{ secrets.GIT_AUTHORIZATION }}@github.com/Ashmika/PodDemoRepository.git --verbose
           cd iosApp && pod install --verbose
 
-      - name: Create Develop Build and iPA
+      #      - name: Create Develop Build and iPA
+      #        if: ${{ github.ref == 'refs/heads/develop' }}
+      #        run: cd iosApp && bundle exec fastlane build_for_develop --verbose
+      #        env:
+      #          APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+      #          APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
+      #          APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
+      #          APP_STORE_CONNECT_API_KEY_IN_HOUSE: ${{ secrets.APP_STORE_CONNECT_API_KEY_IN_HOUSE }}
+      #          APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 }}
+      #          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      #          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+      #          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+      #          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      #          TEAM_ID: ${{ secrets.TEAM_ID }}
+      #          TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
+      #          TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
+      #          GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+      #          SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DIST_PASSWORD }}
+      #          SIGNING_KEY_FILE_PATH: signing-cert.p12
+      #          SIGNING_KEY_PROFILE_PATH: iOS_Ci_Demo_Dev_Profile.mobileprovision
+
+      - name: Create Appstore iPA and Upload on Testflight
+        #        if: ${{ github.event.pull_request.merged }}
         if: ${{ github.ref == 'refs/heads/develop' }}
-        run: cd iosApp && bundle exec fastlane build_for_develop --verbose
+        run: cd iosApp && bundle exec fastlane build_for_release --verbose
         env:
           APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
           APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
@@ -84,36 +110,18 @@ jobs:
           TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
           TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
           GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
-          SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
-          SIGNING_KEY_FILE_PATH: signing-cert.p12
-          SIGNING_KEY_PROFILE_PATH: iOS_Ci_Demo_Dev_Profile.mobileprovision
-
-      - name: Create Appstore iPA and Upload on Testflight
-        if: ${{ github.event.pull_request.merged }}
-        run: cd iosApp && bundle exec fastlane build_for_release --verbose
-        env:
-            APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
-            APP_STORE_CONNECT_API_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ISSUER_ID }}
-            APP_STORE_CONNECT_API_KEY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY_ID }}
-            APP_STORE_CONNECT_API_KEY_IN_HOUSE: ${{ secrets.APP_STORE_CONNECT_API_KEY_IN_HOUSE }}
-            APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_IS_KEY_CONTENT_BASE64 }}
-            FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
-            FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-            FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
-            MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-            TEAM_ID: ${{ secrets.TEAM_ID }}
-            TEMP_KEYCHAIN_USER: ${{ secrets.TEMP_KEYCHAIN_USER }}
-            TEMP_KEYCHAIN_PASSWORD: ${{ secrets.TEMP_KEYCHAIN_PASSWORD }}
-            GIT_AUTHORIZATION: ${{ secrets.GIT_AUTHORIZATION }}
+          DIST_SIGNING_KEY_PASSWORD: ${{ secrets.IOS_DEVELOPER_SIGNING_KEY_PASSWORD }}
+          DIST_SIGNING_KEY_FILE_PATH: signing-dist-cert.p12
+          DIST_SIGNING_KEY_PROFILE_PATH: iOS_Ci_DIST_Profile.mobileprovision
 
       - name: Create develop ipa and dsyms to artifacts
         if: ${{ github.ref == 'refs/heads/develop' }}
         uses: actions/upload-artifact@v2
         with:
-            name: development ipa & dsyms
-            path: |
-              ${{ github.workspace }}/iosApp/build/develop-app.ipa
-              ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
+          name: development ipa & dsyms
+          path: |
+            ${{ github.workspace }}/iosApp/build/develop-app.ipa
+            ${{ github.workspace }}/iosApp/build/*.app.dSYM.zip
 
 #
 
